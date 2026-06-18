@@ -34,6 +34,8 @@
     h3 { font-size: 16px; margin: 20px 0 6px; color: var(--accent2); }
     p, li { color: var(--text); }
     .muted { color: var(--muted); font-size: 14px; }
+    .en { color: var(--muted); font-size: 14.5px; margin-top: 2px; }
+    .en li { color: var(--muted); }
     a { color: var(--accent); }
     ul { padding-left: 22px; }
     li { margin: 6px 0; }
@@ -55,8 +57,8 @@
   <div class="wrap">
     <header>
       <span class="pill">PRIVACY POLICY</span>
-      <h1>GymAI 隱私權政策</h1>
-      <p class="muted">最後更新日期：2026 年 6 月 18 日 · 開發者：GymAI 開發團隊</p>
+      <h1>GymAI 隱私權政策 · Privacy Policy</h1>
+      <p class="muted">最後更新日期 / Last updated: 2026-06-18 · 開發者 / Developer: GymAI Team</p>
     </header>
 
     <p>
@@ -64,9 +66,19 @@
       我們非常重視您的隱私，本政策說明本 App 會收集哪些資料、如何使用、如何保護，
       以及您對自身資料所擁有的權利。當您安裝或使用本 App，即表示您已閱讀並同意本政策。
     </p>
+    <p class="en">
+      GymAI ("the App") is developed and operated by the GymAI Team ("we", "us").
+      We take your privacy seriously. This policy explains what data the App collects,
+      how it is used and protected, and the rights you have over your data. By installing
+      or using the App, you acknowledge that you have read and agree to this policy.
+    </p>
 
-    <h2>1. 我們收集的資訊與權限宣告</h2>
+    <h2>1. 我們收集的資訊與權限宣告 / Information We Collect &amp; Permissions</h2>
     <p>本 App 僅收集為提供健身紀錄與分析功能所必要的資料。以下為實際會使用到的權限：</p>
+    <p class="en">
+      The App only collects data necessary to provide fitness logging and analysis.
+      The following permissions are actually used:
+    </p>
 
     <div class="card">
       <h3>Apple Health（HealthKit）</h3>
@@ -76,18 +88,31 @@
         <strong>絕不外流、絕不販售、亦絕不用於任何廣告用途</strong>。
         您可隨時於 iOS「設定 → 健康 → 資料存取與裝置」中撤回授權。
       </p>
-    </div>
-
-    <div class="card">
-      <h3>身體組成數據（InBody）</h3>
-      <p>
-        您手動輸入或透過掃描 InBody 報告所產生的<strong>體脂率、骨骼肌重、內臟脂肪等級、
-        部位別肌肉量</strong>等資料，將儲存於您的個人帳號中，僅用於趨勢追蹤與分析。
+      <p class="en">
+        With your explicit consent, the App may read or write the following health data:
+        <strong>steps, sleep, heart rate, workouts, and body weight</strong>. This data is
+        used solely to display your training and recovery analysis inside the App, and is
+        <strong>never shared, sold, or used for advertising</strong>. You may revoke access
+        at any time in iOS Settings → Health → Data Access &amp; Devices.
       </p>
     </div>
 
     <div class="card">
-      <h3>相機與相簿權限</h3>
+      <h3>身體組成數據 / Body Composition (InBody)</h3>
+      <p>
+        您手動輸入或透過掃描 InBody 報告所產生的<strong>體脂率、骨骼肌重、內臟脂肪等級、
+        部位別肌肉量</strong>等資料，將儲存於您的個人帳號中，僅用於趨勢追蹤與分析。
+      </p>
+      <p class="en">
+        Data you enter manually or capture by scanning an InBody report — such as
+        <strong>body fat percentage, skeletal muscle mass, visceral fat level, and
+        segmental muscle analysis</strong> — is stored in your account and used only for
+        trend tracking and analysis.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>相機與相簿權限 / Camera &amp; Photos</h3>
       <ul>
         <li>
           <strong>相機</strong>：僅用於掃描有氧機台螢幕進行 OCR 文字辨識，
@@ -100,34 +125,62 @@
           其他照片</strong>。
         </li>
       </ul>
+      <ul class="en">
+        <li>
+          <strong>Camera</strong>: used only to scan cardio machine screens for OCR text
+          recognition and to scan InBody reports. Images are processed <strong>on-device</strong>;
+          we do not retain original photos without your action.
+        </li>
+        <li>
+          <strong>Photos (write)</strong>: used only to save workout result videos/cards that
+          are composed locally on your device, so you can share them to IG, FB, etc. We
+          <strong>do not read or upload other photos</strong> from your library.
+        </li>
+      </ul>
     </div>
 
-    <h2>2. 我們如何使用您的資訊</h2>
+    <h2>2. 我們如何使用您的資訊 / How We Use Your Information</h2>
     <ul>
       <li>提供並維護核心功能：訓練日記、1RM 力量分析、AI 教練報告、InBody 數據中心。</li>
       <li>在您的多裝置之間同步資料。</li>
       <li>產生個人化的訓練建議、恢復指數與成就系統。</li>
       <li>改善 App 穩定性與使用體驗。</li>
     </ul>
+    <ul class="en">
+      <li>Provide and maintain core features: training log, 1RM analysis, AI coach reports, InBody data center.</li>
+      <li>Sync your data across your devices.</li>
+      <li>Generate personalized training suggestions, recovery index, and achievements.</li>
+      <li>Improve the App's stability and user experience.</li>
+    </ul>
 
-    <h2>3. 資料儲存與安全</h2>
+    <h2>3. 資料儲存與安全 / Data Storage &amp; Security</h2>
     <p>
       本 App 使用 <strong>Google Firebase（Cloud Firestore 與 Firebase Authentication）</strong>
       進行帳號驗證與雲端資料同步。資料在傳輸與儲存過程中採用業界標準加密機制。
       我們<strong>承諾絕不將您的個人資料或健康數據販售給任何第三方廣告商</strong>。
     </p>
+    <p class="en">
+      The App uses <strong>Google Firebase (Cloud Firestore and Firebase Authentication)</strong>
+      for account authentication and cloud sync. Data is encrypted in transit and at rest using
+      industry-standard mechanisms. We <strong>will never sell your personal or health data to
+      any third-party advertiser</strong>.
+    </p>
 
-    <h2>4. 第三方服務</h2>
+    <h2>4. 第三方服務 / Third-Party Services</h2>
     <p>
       本 App 使用 Google Firebase 提供雲端基礎設施。相關資料處理受
       <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google
       隱私權與安全政策</a>規範。除提供服務所必要者外，我們不會與其他第三方分享您的個人資料。
     </p>
-
-    <h2>5. 您的權利（一鍵刪除帳號）</h2>
-    <p>
-      您對自己的資料擁有完整掌控權。您可以隨時：
+    <p class="en">
+      The App relies on Google Firebase for cloud infrastructure; related processing is governed by
+      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google's
+      Privacy and Security policy</a>. We do not share your personal data with other third parties
+      except as necessary to provide the service.
     </p>
+
+    <h2>5. 您的權利（一鍵刪除帳號）/ Your Rights (Account Deletion)</h2>
+    <p>您對自己的資料擁有完整掌控權。您可以隨時：</p>
     <ul>
       <li>於 App 內查看、修改您的個人資料與訓練紀錄。</li>
       <li>
@@ -136,24 +189,42 @@
         一經執行，我們將從 Firebase 伺服器<strong>永久且不可復原地刪除</strong>您的所有資料。
       </li>
     </ul>
+    <p class="en">You have full control over your data. At any time you may:</p>
+    <ul class="en">
+      <li>View and edit your profile and training records inside the App.</li>
+      <li>
+        <strong>Request complete deletion of your account and all health history</strong> via
+        Profile → Settings → Reset / Delete Account, or by emailing the address below. Once
+        executed, all your data is <strong>permanently and irreversibly deleted</strong> from
+        Firebase servers.
+      </li>
+    </ul>
 
-    <h2>6. 兒童隱私</h2>
+    <h2>6. 兒童隱私 / Children's Privacy</h2>
     <p>本 App 不針對未滿 13 歲之兒童設計，亦不會在知情情況下收集其個人資料。</p>
+    <p class="en">
+      The App is not directed to children under 13 and does not knowingly collect their personal data.
+    </p>
 
-    <h2>7. 政策變更</h2>
+    <h2>7. 政策變更 / Changes to This Policy</h2>
     <p>
       我們可能不時更新本政策。任何重大變更將於本頁面公告並更新「最後更新日期」。
       建議您定期查閱本政策。
     </p>
+    <p class="en">
+      We may update this policy from time to time. Material changes will be posted on this page with
+      an updated "Last updated" date. Please review this policy periodically.
+    </p>
 
-    <h2>8. 聯絡我們</h2>
+    <h2>8. 聯絡我們 / Contact Us</h2>
     <p>
       若您對本隱私權政策有任何疑問，或欲行使資料權利，請來信：<br />
-      <strong>gymai.support@gmail.com</strong>（請替換為正式聯絡信箱）
+      If you have any questions about this policy or wish to exercise your rights, contact us at:<br />
+      <strong>gymai.support@gmail.com</strong>（請替換為正式聯絡信箱 / replace with your official email）
     </p>
 
     <footer>
-      <p class="muted">© 2026 GymAI 開發團隊 · 本頁面僅供 App 隱私權合規之用。</p>
+      <p class="muted">© 2026 GymAI Team · 本頁面僅供 App 隱私權合規之用 / For App privacy compliance only.</p>
     </footer>
   </div>
 </body>
