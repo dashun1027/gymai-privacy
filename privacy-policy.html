@@ -13,6 +13,7 @@
       --muted: #a1a1aa;
       --accent: #22c55e;
       --accent2: #a855f7;
+      --warn: #f59e0b;
     }
     * { box-sizing: border-box; }
     body {
@@ -43,11 +44,20 @@
       background: var(--card); border: 1px solid var(--border);
       border-radius: 16px; padding: 18px 22px; margin: 16px 0;
     }
+    .card.planned {
+      border-color: rgba(245, 158, 11, 0.35);
+      background: rgba(245, 158, 11, 0.04);
+    }
     .pill {
       display: inline-block; font-size: 12px; font-weight: 700;
       color: var(--accent); border: 1px solid rgba(34,197,94,.4);
       background: rgba(34,197,94,.08); border-radius: 999px;
       padding: 3px 12px; margin-bottom: 14px;
+    }
+    .pill.planned {
+      color: var(--warn);
+      border-color: rgba(245, 158, 11, 0.45);
+      background: rgba(245, 158, 11, 0.1);
     }
     footer { margin-top: 48px; border-top: 1px solid var(--border); padding-top: 18px; }
     strong { color: #fff; }
@@ -58,7 +68,7 @@
     <header>
       <span class="pill">PRIVACY POLICY</span>
       <h1>GymAI 隱私權政策 · Privacy Policy</h1>
-      <p class="muted">最後更新日期 / Last updated: 2026-06-18 · 開發者 / Developer: GymAI Team</p>
+      <p class="muted">最後更新日期 / Last updated: 2026-06-19 · 開發者 / Developer: GymAI Team</p>
     </header>
 
     <p>
@@ -73,154 +83,283 @@
       or using the App, you acknowledge that you have read and agree to this policy.
     </p>
 
-    <h2>1. 我們收集的資訊與權限宣告 / Information We Collect &amp; Permissions</h2>
-    <p>本 App 僅收集為提供健身紀錄與分析功能所必要的資料。以下為實際會使用到的權限：</p>
+    <h2>1. 我們收集的資訊 / Information We Collect</h2>
+    <p>
+      本 App 採<strong>「可先本機使用、登入後雲端同步」</strong>模式。您無須註冊帳號即可使用核心功能；
+      資料預設儲存在您的裝置本機。當您選擇以 Google 或 Apple 登入後，我們才會將您的資料同步至雲端帳號。
+    </p>
     <p class="en">
-      The App only collects data necessary to provide fitness logging and analysis.
-      The following permissions are actually used:
+      The App uses a <strong>"local-first, cloud sync on sign-in"</strong> model. You may use core
+      features without creating an account; data is stored on your device by default. Cloud sync
+      occurs only after you choose to sign in with Google or Apple.
     </p>
 
     <div class="card">
-      <h3>Apple Health（HealthKit）</h3>
-      <p>
-        經您明確授權後，本 App 可能讀取或寫入下列健康數據：<strong>步數、睡眠、心率、
-        體能訓練（Workout）與體重</strong>。這些資料僅用於在 App 內呈現您的訓練與恢復分析，
-        <strong>絕不外流、絕不販售、亦絕不用於任何廣告用途</strong>。
-        您可隨時於 iOS「設定 → 健康 → 資料存取與裝置」中撤回授權。
-      </p>
-      <p class="en">
-        With your explicit consent, the App may read or write the following health data:
-        <strong>steps, sleep, heart rate, workouts, and body weight</strong>. This data is
-        used solely to display your training and recovery analysis inside the App, and is
-        <strong>never shared, sold, or used for advertising</strong>. You may revoke access
-        at any time in iOS Settings → Health → Data Access &amp; Devices.
-      </p>
+      <h3>訓練與健身紀錄 / Training &amp; Fitness Data</h3>
+      <ul>
+        <li>重訓紀錄（器材、肌群、組數、重量、次數、估算 1RM、訓練日期等）</li>
+        <li>有氧紀錄（距離、時間、卡路里等，含 OCR 掃描後擷取之數值）</li>
+        <li>自訂器材與訓練偏好</li>
+        <li>每日身體狀態評估（您於日曆上主動標記的主觀狀態）</li>
+        <li>個人檔案設定（如暱稱、性別、年齡、身高、體重單位等，若您選擇填寫）</li>
+      </ul>
+      <ul class="en">
+        <li>Strength training logs (equipment, muscle groups, sets, weight, reps, estimated 1RM, dates)</li>
+        <li>Cardio logs (distance, time, calories, including values captured via OCR)</li>
+        <li>Custom equipment and training preferences</li>
+        <li>Daily subjective state assessments you mark on the calendar</li>
+        <li>Profile settings you choose to provide (e.g. display name, gender, age, height, units)</li>
+      </ul>
     </div>
 
     <div class="card">
       <h3>身體組成數據 / Body Composition (InBody)</h3>
       <p>
-        您手動輸入或透過掃描 InBody 報告所產生的<strong>體脂率、骨骼肌重、內臟脂肪等級、
-        部位別肌肉量</strong>等資料，將儲存於您的個人帳號中，僅用於趨勢追蹤與分析。
+        您手動輸入，或透過掃描／匯入 InBody 報告（圖片或 PDF）所產生的資料，例如：
+        <strong>體重、體脂率、骨骼肌重、基礎代謝、內臟脂肪等級、部位別肌肉量</strong>。
+        為協助校正辨識結果，我們可能一併儲存<strong> OCR 原始辨識文字</strong>（僅供您帳號內查閱與修正，不作廣告用途）。
       </p>
       <p class="en">
-        Data you enter manually or capture by scanning an InBody report — such as
-        <strong>body fat percentage, skeletal muscle mass, visceral fat level, and
-        segmental muscle analysis</strong> — is stored in your account and used only for
-        trend tracking and analysis.
+        Data you enter manually or capture by scanning/importing an InBody report (image or PDF),
+        such as <strong>weight, body fat %, skeletal muscle mass, BMR, visceral fat level, and
+        segmental muscle analysis</strong>. To help verify OCR results, we may also store the
+        <strong>raw OCR text</strong> in your account for review and correction only — not for advertising.
       </p>
     </div>
 
     <div class="card">
-      <h3>相機與相簿權限 / Camera &amp; Photos</h3>
+      <h3>帳號與訂閱狀態 / Account &amp; Subscription</h3>
+      <p>
+        若您登入，我們透過 Firebase Authentication 處理身分驗證。Google 登入可能取得您的
+        <strong>電子郵件與公開個人資料</strong>；Apple 登入可能取得 Apple 提供之
+        <strong>電子郵件與姓名</strong>（您可選擇隱藏電子郵件）。
+        訂閱／試用狀態（如 Pro 權限、試用期限）會儲存於您的帳號資料中，以提供功能解鎖判斷。
+      </p>
+      <p class="en">
+        If you sign in, we use Firebase Authentication. Google Sign-In may receive your
+        <strong>email and public profile</strong>; Sign in with Apple may receive an
+        <strong>email and name</strong> provided by Apple (you may use Apple's private relay email).
+        Subscription/trial status (e.g. Pro access, trial dates) is stored in your account to
+        determine feature access.
+      </p>
+    </div>
+
+    <h2>2. 裝置權限宣告 / Device Permissions</h2>
+    <p>以下為本 App 實際會請求的權限與用途：</p>
+    <p class="en">The following permissions are requested and used as described:</p>
+
+    <div class="card">
+      <h3>相機 / Camera</h3>
+      <p>
+        用於掃描有氧機台螢幕，以及拍攝 InBody 報告以進行 OCR 文字辨識。
+        影像在<strong>您的裝置本地端</strong>處理；我們不會在您未主動操作的情況下，於背景拍攝或上傳原始照片。
+      </p>
+      <p class="en">
+        Used to scan cardio machine screens and capture InBody reports for on-device OCR.
+        Images are processed <strong>locally on your device</strong>; we do not capture or upload
+        photos in the background without your action.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>相簿 / Photo Library</h3>
       <ul>
         <li>
-          <strong>相機</strong>：僅用於掃描有氧機台螢幕進行 OCR 文字辨識，
-          以及掃描 InBody 報告。影像於辨識後在<strong>裝置本地端</strong>處理，
-          我們不會在未經您操作的情況下保留原始照片。
+          <strong>讀取（選取匯入）</strong>：僅在您主動選擇要匯入的 InBody 圖片或 PDF 時讀取該檔案。
+          我們<strong>不會</strong>在背景掃描或上傳您相簿中的其他照片。
         </li>
         <li>
-          <strong>相簿（寫入）</strong>：僅用於將您在裝置本地端合成的訓練成果影片 / 圖卡
-          儲存到您的相簿，以便分享至 IG、FB 等社群。我們<strong>不會讀取或上傳您相簿中的
-          其他照片</strong>。
+          <strong>寫入</strong>：僅在您要求時，將於裝置本地端合成的訓練成果影片／圖卡儲存至相簿，以便您自行分享。
         </li>
       </ul>
       <ul class="en">
         <li>
-          <strong>Camera</strong>: used only to scan cardio machine screens for OCR text
-          recognition and to scan InBody reports. Images are processed <strong>on-device</strong>;
-          we do not retain original photos without your action.
+          <strong>Read (user-selected import)</strong>: only when you explicitly pick an InBody image
+          or PDF to import. We <strong>do not</strong> scan or upload other photos in the background.
         </li>
         <li>
-          <strong>Photos (write)</strong>: used only to save workout result videos/cards that
-          are composed locally on your device, so you can share them to IG, FB, etc. We
-          <strong>do not read or upload other photos</strong> from your library.
+          <strong>Write</strong>: only when you request to save locally composed workout videos/cards
+          to your library for sharing.
         </li>
       </ul>
     </div>
 
-    <h2>2. 我們如何使用您的資訊 / How We Use Your Information</h2>
+    <div class="card planned">
+      <span class="pill planned">規劃中 · PLANNED</span>
+      <h3>Apple Health（HealthKit）</h3>
+      <p>
+        <strong>截至本政策更新日，Apple Health 串接功能尚未正式上線。</strong>
+        未來若推出，將在您於 iOS 明確授權後，才可能讀取或寫入步數、睡眠、心率、體能訓練或體重等資料，
+        且僅用於 App 內訓練與恢復分析，<strong>絕不販售、不作廣告用途</strong>。
+        功能上線前，我們將再次更新本政策並於 App 內另行徵求授權。
+      </p>
+      <p class="en">
+        <strong>As of this policy update, Apple Health integration is not yet live.</strong>
+        If launched in the future, with your explicit iOS consent we may read or write steps, sleep,
+        heart rate, workouts, or body weight solely for in-app training and recovery analysis —
+        <strong>never sold or used for ads</strong>. We will update this policy and request consent
+        in the App before enabling the feature.
+      </p>
+    </div>
+
+    <h2>3. AI 與分析功能如何運作 / How AI &amp; Analytics Work</h2>
+    <div class="card">
+      <p>
+        GymAI 的「AI 教練報告」「恢復指數」「力量分析」「InBody×訓練交叉評估」「肌群平衡建議」等，
+        係依據您已記錄的訓練與身體數據，在<strong>裝置端或以規則式演算法運算</strong>產生建議與文案。
+      </p>
+      <p>
+        <strong>我們不會將您的訓練紀錄、InBody 數據或健康相關內容傳送至 ChatGPT、Gemini
+        或其他外部生成式 AI 服務</strong>以產生建議。OCR 文字辨識使用 Google ML Kit，
+        於裝置本地端處理，辨識完成後僅儲存您選擇保留的結構化數據與（若有）原始 OCR 文字。
+      </p>
+      <p class="en">
+        GymAI "AI coach reports," recovery index, strength analytics, InBody×training cross-assessment,
+        and muscle-balance advice are generated from your logged data using
+        <strong>on-device and rule-based algorithms</strong>.
+      </p>
+      <p class="en">
+        <strong>We do not send your training logs, InBody data, or health-related content to ChatGPT,
+        Gemini, or other external generative AI services.</strong> OCR uses Google ML Kit on-device;
+        after recognition, only structured fields and (if applicable) raw OCR text you keep are stored.
+      </p>
+    </div>
+
+    <h2>4. 我們如何使用您的資訊 / How We Use Your Information</h2>
     <ul>
-      <li>提供並維護核心功能：訓練日記、1RM 力量分析、AI 教練報告、InBody 數據中心。</li>
-      <li>在您的多裝置之間同步資料。</li>
-      <li>產生個人化的訓練建議、恢復指數與成就系統。</li>
-      <li>改善 App 穩定性與使用體驗。</li>
+      <li>提供並維護核心功能：訓練日記、1RM 分析、AI 教練報告、InBody 數據中心、分享圖卡／影片等。</li>
+      <li>在您登入後，於您授權的裝置間同步資料（透過 Firebase）。</li>
+      <li>依您的紀錄產生個人化訓練建議、恢復指數、成就與進度追蹤。</li>
+      <li>判斷免費版／Pro 版功能權限與試用狀態。</li>
+      <li>改善 App 穩定性與使用體驗（不含出售個人資料作廣告定向）。</li>
     </ul>
     <ul class="en">
-      <li>Provide and maintain core features: training log, 1RM analysis, AI coach reports, InBody data center.</li>
-      <li>Sync your data across your devices.</li>
-      <li>Generate personalized training suggestions, recovery index, and achievements.</li>
-      <li>Improve the App's stability and user experience.</li>
+      <li>Provide core features: training log, 1RM analysis, AI coach, InBody center, share cards/videos.</li>
+      <li>Sync across your devices after you sign in (via Firebase).</li>
+      <li>Generate personalized suggestions, recovery index, achievements, and progress tracking.</li>
+      <li>Determine Free vs. Pro feature access and trial status.</li>
+      <li>Improve stability and UX (not selling personal data for ad targeting).</li>
     </ul>
 
-    <h2>3. 資料儲存與安全 / Data Storage &amp; Security</h2>
+    <h2>5. 資料儲存與安全 / Data Storage &amp; Security</h2>
+    <div class="card">
+      <h3>本機儲存 / Local Storage</h3>
+      <p>
+        未登入或登入前，您的訓練、InBody、器材、每日狀態等資料以加密檔案形式儲存在
+        <strong>您裝置的應用程式文件目錄</strong>中，不會自動上傳至雲端。
+      </p>
+      <p class="en">
+        Before or without sign-in, your data is stored in <strong>your device's app documents
+        directory</strong> and is not automatically uploaded to the cloud.
+      </p>
+    </div>
+    <div class="card">
+      <h3>雲端同步 / Cloud Sync</h3>
+      <p>
+        當您以 Google 或 Apple 登入並觸發同步時，本機資料會上傳至
+        <strong>Google Firebase（Cloud Firestore 與 Firebase Authentication）</strong>，
+        與您的帳號綁定。同步成功後，本機資料可能依 App 流程清除，以避免重複。
+        資料在傳輸與儲存過程中採用業界標準加密機制。
+      </p>
+      <p class="en">
+        When you sign in with Google or Apple and sync, local data is uploaded to
+        <strong>Google Firebase (Firestore &amp; Authentication)</strong> linked to your account.
+        After a successful sync, local copies may be cleared per app flow. Data is encrypted in
+        transit and at rest using industry-standard mechanisms.
+      </p>
+    </div>
     <p>
-      本 App 使用 <strong>Google Firebase（Cloud Firestore 與 Firebase Authentication）</strong>
-      進行帳號驗證與雲端資料同步。資料在傳輸與儲存過程中採用業界標準加密機制。
       我們<strong>承諾絕不將您的個人資料或健康數據販售給任何第三方廣告商</strong>。
     </p>
     <p class="en">
-      The App uses <strong>Google Firebase (Cloud Firestore and Firebase Authentication)</strong>
-      for account authentication and cloud sync. Data is encrypted in transit and at rest using
-      industry-standard mechanisms. We <strong>will never sell your personal or health data to
-      any third-party advertiser</strong>.
+      We <strong>will never sell your personal or health data to any third-party advertiser</strong>.
     </p>
 
-    <h2>4. 第三方服務 / Third-Party Services</h2>
-    <p>
-      本 App 使用 Google Firebase 提供雲端基礎設施。相關資料處理受
-      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google
-      隱私權與安全政策</a>規範。除提供服務所必要者外，我們不會與其他第三方分享您的個人資料。
-    </p>
-    <p class="en">
-      The App relies on Google Firebase for cloud infrastructure; related processing is governed by
-      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google's
-      Privacy and Security policy</a>. We do not share your personal data with other third parties
-      except as necessary to provide the service.
-    </p>
-
-    <h2>5. 您的權利（一鍵刪除帳號）/ Your Rights (Account Deletion)</h2>
-    <p>您對自己的資料擁有完整掌控權。您可以隨時：</p>
+    <h2>6. 第三方服務 / Third-Party Services</h2>
+    <p>為提供服務，本 App 使用下列第三方，且僅在必要範圍內處理資料：</p>
     <ul>
-      <li>於 App 內查看、修改您的個人資料與訓練紀錄。</li>
       <li>
-        <strong>要求徹底刪除帳號與所有歷史健康紀錄</strong>：您可於 App 的
-        「個人檔案 → 設定 → 重置 / 刪除帳號」執行刪除，或來信至下方聯絡信箱提出申請。
-        一經執行，我們將從 Firebase 伺服器<strong>永久且不可復原地刪除</strong>您的所有資料。
+        <strong>Google Firebase</strong>（身分驗證、雲端資料庫）—
+        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">隱私說明</a>
+      </li>
+      <li>
+        <strong>Google Sign-In</strong>（選用登入）—
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>
+      </li>
+      <li>
+        <strong>Sign in with Apple</strong>（選用登入）—
+        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple 隱私權政策</a>
+      </li>
+      <li>
+        <strong>Google ML Kit</strong>（裝置端 OCR 文字辨識）— 影像於裝置上處理，不為 OCR 而上傳至我們伺服器
+      </li>
+      <li>
+        <strong>Apple App Store</strong>（若您訂閱 Pro）— 付款由 Apple 處理，我們不直接儲存您的信用卡資訊
       </li>
     </ul>
-    <p class="en">You have full control over your data. At any time you may:</p>
+    <p class="en">Third parties used only as necessary to provide the service:</p>
     <ul class="en">
-      <li>View and edit your profile and training records inside the App.</li>
-      <li>
-        <strong>Request complete deletion of your account and all health history</strong> via
-        Profile → Settings → Reset / Delete Account, or by emailing the address below. Once
-        executed, all your data is <strong>permanently and irreversibly deleted</strong> from
-        Firebase servers.
-      </li>
+      <li><strong>Google Firebase</strong> (auth, database) —
+        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy</a></li>
+      <li><strong>Google Sign-In</strong> (optional) —
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+      <li><strong>Sign in with Apple</strong> (optional) —
+        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+      <li><strong>Google ML Kit</strong> (on-device OCR) — images processed on device</li>
+      <li><strong>Apple App Store</strong> (Pro subscriptions) — payments handled by Apple; we do not store card data</li>
     </ul>
 
-    <h2>6. 兒童隱私 / Children's Privacy</h2>
+    <h2>7. 您的權利與資料刪除 / Your Rights &amp; Data Deletion</h2>
+    <p>您對自己的資料擁有掌控權。您可以隨時：</p>
+    <ul>
+      <li>於 App 內查看、修改訓練紀錄、InBody 數據與個人檔案設定。</li>
+      <li>
+        <strong>重置並刪除 App 內資料</strong>：於「個人檔案 → 設定 → 重置所有資料」執行。
+        若您已登入，此操作將刪除雲端帳號下之訓練、InBody、器材、每日狀態等紀錄，以及相關個人檔案欄位。
+        若您未登入，則清除裝置本機儲存之資料。
+      </li>
+      <li>
+        <strong>刪除登入帳號（Firebase Authentication）</strong>：若您需要連同登入身分一併刪除，
+        請來信下方聯絡信箱提出申請，我們將於合理期限內協助處理。
+      </li>
+      <li>停止使用 App 並解除 Google／Apple 對本 App 的授權（可於各平台帳號設定中操作）。</li>
+    </ul>
+    <p class="en">You may at any time:</p>
+    <ul class="en">
+      <li>View and edit your logs, InBody data, and profile in the App.</li>
+      <li>
+        <strong>Reset and delete in-app data</strong> via Profile → Settings → Reset All Data.
+        If signed in, this deletes cloud-stored workouts, InBody, equipment, check-ins, and profile fields.
+        If not signed in, this clears local device storage.
+      </li>
+      <li>
+        <strong>Delete your sign-in account (Firebase Authentication)</strong>: email us below to request
+        full account removal; we will assist within a reasonable time.
+      </li>
+      <li>Stop using the App and revoke Google/Apple authorization in platform settings.</li>
+    </ul>
+
+    <h2>8. 兒童隱私 / Children's Privacy</h2>
     <p>本 App 不針對未滿 13 歲之兒童設計，亦不會在知情情況下收集其個人資料。</p>
     <p class="en">
       The App is not directed to children under 13 and does not knowingly collect their personal data.
     </p>
 
-    <h2>7. 政策變更 / Changes to This Policy</h2>
+    <h2>9. 政策變更 / Changes to This Policy</h2>
     <p>
-      我們可能不時更新本政策。任何重大變更將於本頁面公告並更新「最後更新日期」。
-      建議您定期查閱本政策。
+      我們可能不時更新本政策（例如新增 HealthKit 串接或訂閱功能時）。
+      任何重大變更將於本頁面公告並更新「最後更新日期」。建議您定期查閱本政策。
     </p>
     <p class="en">
-      We may update this policy from time to time. Material changes will be posted on this page with
-      an updated "Last updated" date. Please review this policy periodically.
+      We may update this policy from time to time (e.g. when enabling HealthKit or subscription features).
+      Material changes will be posted here with an updated "Last updated" date. Please review periodically.
     </p>
 
-    <h2>8. 聯絡我們 / Contact Us</h2>
+    <h2>10. 聯絡我們 / Contact Us</h2>
     <p>
-      若您對本隱私權政策有任何疑問，或欲行使資料權利，請來信：<br />
-      If you have any questions about this policy or wish to exercise your rights, contact us at:<br />
-      <strong>gymai.support@gmail.com</strong>（請替換為正式聯絡信箱 / replace with your official email）
+      若您對本隱私權政策有任何疑問，或欲行使資料存取、更正、刪除等權利，請來信：<br />
+      If you have questions or wish to exercise your data rights, contact us at:<br />
+      <strong><a href="mailto:gymai.support@gmail.com">gymai.support@gmail.com</a></strong>
     </p>
 
     <footer>
