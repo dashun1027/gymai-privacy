@@ -61,6 +61,7 @@
     }
     footer { margin-top: 48px; border-top: 1px solid var(--border); padding-top: 18px; }
     strong { color: #fff; }
+    hr { border: 0; border-top: 1px solid var(--border); margin: 28px 0; }
   </style>
 </head>
 <body>
@@ -68,7 +69,7 @@
     <header>
       <span class="pill">PRIVACY POLICY</span>
       <h1>GymAI 隱私權政策 · Privacy Policy</h1>
-      <p class="muted">最後更新日期 / Last updated: 2026-06-28 · 開發者 / Developer: GymAI Team</p>
+      <p class="muted">最後更新日期 / Last updated: 2026-08-04 · 開發者 / Developer: GymAI Team</p>
     </header>
 
     <p>
@@ -139,6 +140,33 @@
         <strong>email and name</strong> provided by Apple (you may use Apple's private relay email).
         Subscription/trial status (e.g. Pro access, trial dates) is stored in your account to
         determine feature access.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>購買與權益資料 / Purchase &amp; Entitlement Data</h3>
+      <p>
+        若您購買 Pro 方案，我們會儲存判斷權益所需的最小資料：
+        <strong>App Store 交易識別碼、商品代碼、購買與到期時間、購買環境、權益狀態</strong>，
+        以及一組由您的帳號衍生、用於將購買與帳號對應的識別值。
+      </p>
+      <p>
+        付款由 Apple 處理，<strong>我們不會取得也不會儲存您的信用卡或付款資訊</strong>。
+        若您將購買移轉至另一個 GymAI 帳號（例如更換登入方式後恢復購買），
+        我們會保留一筆移轉紀錄供帳務查證，內容僅含交易識別碼、前後帳號識別碼與時間。
+      </p>
+      <p class="en">
+        If you purchase a Pro plan, we store the minimum data needed to determine your
+        entitlement: <strong>App Store transaction identifiers, product identifiers, purchase and
+        expiry dates, purchase environment, and entitlement status</strong>, plus a value derived
+        from your account used to associate the purchase with it.
+      </p>
+      <p class="en">
+        Payments are processed by Apple; <strong>we never receive or store your card or payment
+        details</strong>. If you transfer a purchase to another GymAI account (for example, restoring
+        after changing sign-in method), we retain a transfer record for billing verification
+        containing only the transaction identifier, the previous and new account identifiers,
+        and the timestamp.
       </p>
     </div>
 
@@ -287,40 +315,60 @@
     </ul>
 
     <h2>7. 您的權利與資料刪除 / Your Rights &amp; Data Deletion</h2>
-    <p>您對自己的資料擁有掌控權。您可以隨時：</p>
+
+    <p>您對自己的資料擁有掌控權。本 App 提供兩種不同的清除方式，範圍不同，不可互相取代：</p>
+
+    <h3>重置所有資料 / Reset All Data</h3>
+    <p>路徑：<strong>我的 → 設定 → 重置所有資料</strong></p>
+    <p>刪除訓練紀錄、InBody 紀錄、器材資料、每日狀態與個人檔案欄位。
+    <strong>保留</strong>您的登入帳號與訂閱／試用狀態。</p>
+
+    <h3>刪除帳號 / Delete Account</h3>
+    <p>路徑：<strong>我的 → 設定 → 帳號管理 → 刪除帳號</strong></p>
+    <p>刪除上述全部資料，<strong>並一併刪除您的登入帳號（Firebase Authentication）</strong>。
+    若您使用 Sign in with Apple 登入，我們會同時呼叫 Apple 的授權撤銷機制解除本 App 的授權。
+    此操作不可復原，執行前會請您二次確認。</p>
+
+    <h3>刪除帳號不包含的範圍 / What Account Deletion Does Not Cover</h3>
     <ul>
-      <li>於 App 內查看、修改訓練紀錄、InBody 數據與個人檔案設定。</li>
-      <li>
-        <strong>重置並刪除 App 內資料</strong>：於「個人檔案 → 設定 → 重置所有資料」執行。
-        若您已登入，此操作將刪除雲端帳號下之訓練、InBody、器材、每日狀態等紀錄，以及相關個人檔案欄位。
-        若您未登入，則清除裝置本機儲存之資料。
-      </li>
-      <li>
-        <strong>刪除帳號</strong>：於「個人檔案 → 設定 → 帳號管理 → 刪除帳號」執行（需已登入）。
-        此操作將刪除 Firebase 登入帳號、雲端與本機訓練／InBody／器材／每日狀態等資料、個人檔案欄位，以及 AI 分析衍生資料；
-        若您以 Sign in with Apple 登入，我們亦會撤銷 Apple 授權。
-        <strong>刪除帳號不會自動取消 Apple App Store 訂閱</strong>；若要停止扣款，請至 iOS「設定 → Apple ID → 訂閱項目」取消。
-        若您未登入，可使用「重置所有資料」清除本機資料。
-      </li>
-      <li>停止使用 App 並解除 Google／Apple 對本 App 的授權（可於各平台帳號設定中操作）。</li>
+      <li><strong>不會自動取消您的 App Store 訂閱。</strong>若要停止扣款，請至
+          iOS「設定 → Apple 帳號 → 訂閱」自行取消。</li>
+      <li><strong>不會刪除或重設 Apple 保管的交易紀錄與購買資格。</strong>
+          該等資料由 Apple 保管，不在我們的控制範圍內。</li>
+      <li>您已購買的終身版或仍有效的訂閱，仍屬於您的 Apple 帳號。
+          日後以新帳號登入時，可透過 App 內的「恢復購買」取回。</li>
     </ul>
-    <p class="en">You may at any time:</p>
+
+    <p>您也可以隨時停止使用本 App，並於 Google／Apple 帳號設定中解除對本 App 的授權。</p>
+
+    <hr>
+
+    <p class="en">You control your own data. The App offers two distinct removal options with different
+    scopes; one does not substitute for the other.</p>
+
+    <h3>Reset All Data</h3>
+    <p class="en">Path: <strong>Profile → Settings → Reset All Data</strong></p>
+    <p class="en">Deletes training logs, InBody records, equipment, daily check-ins, and profile fields.
+    Your sign-in account and subscription/trial status are <strong>retained</strong>.</p>
+
+    <h3>Delete Account</h3>
+    <p class="en">Path: <strong>Profile → Settings → Account → Delete Account</strong></p>
+    <p class="en">Deletes all of the above <strong>and your sign-in account (Firebase Authentication)</strong>.
+    If you signed in with Apple, we also revoke the app's authorization via Apple's token
+    revocation. This action is irreversible and requires confirmation.</p>
+
+    <h3>What Account Deletion Does Not Cover</h3>
     <ul class="en">
-      <li>View and edit your logs, InBody data, and profile in the App.</li>
-      <li>
-        <strong>Reset and delete in-app data</strong> via Profile → Settings → Reset All Data.
-        If signed in, this deletes cloud-stored workouts, InBody, equipment, check-ins, and profile fields.
-        If not signed in, this clears local device storage.
-      </li>
-      <li>
-        <strong>Delete account</strong>: Profile → Settings → Account → Delete Account (sign-in required).
-        This removes your Firebase account, cloud and local workouts/InBody/equipment/check-ins, profile fields,
-        and derived AI analytics; for Sign in with Apple, we also revoke Apple authorization.
-        <strong>Deleting your account does not cancel App Store subscriptions</strong>; cancel in iOS Settings → Apple ID → Subscriptions.
-        If not signed in, use Reset All Data to clear local storage.
-      </li>
-      <li>Stop using the App and revoke Google/Apple authorization in platform settings.</li>
+      <li><strong>It does not cancel your App Store subscription.</strong> To stop billing,
+          cancel in iOS Settings → Apple Account → Subscriptions.</li>
+      <li><strong>It does not delete or reset transaction records or purchase eligibility
+          held by Apple</strong>, which are outside our control.</li>
+      <li>A lifetime purchase or active subscription remains tied to your Apple Account.
+          You can recover it via "Restore Purchases" after signing in with a new account.</li>
     </ul>
+
+    <p class="en">You may also stop using the App and revoke its authorization in your Google/Apple
+    account settings at any time.</p>
 
     <h2>8. 兒童隱私 / Children's Privacy</h2>
     <p>本 App 不針對未滿 13 歲之兒童設計，亦不會在知情情況下收集其個人資料。</p>
@@ -330,11 +378,11 @@
 
     <h2>9. 政策變更 / Changes to This Policy</h2>
     <p>
-      我們可能不時更新本政策（例如新增 HealthKit 串接或訂閱功能時）。
+      我們可能不時更新本政策（例如新增 HealthKit 串接時）。
       任何重大變更將於本頁面公告並更新「最後更新日期」。建議您定期查閱本政策。
     </p>
     <p class="en">
-      We may update this policy from time to time (e.g. when enabling HealthKit or subscription features).
+      We may update this policy from time to time (e.g. when enabling HealthKit integration).
       Material changes will be posted here with an updated "Last updated" date. Please review periodically.
     </p>
 
