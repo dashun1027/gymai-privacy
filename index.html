@@ -1,60 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GymAI · 法律文件 Legal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GymAI 是為重量訓練者打造的個人健身紀錄與分析工具。">
+  <title>GymAI｜你的訓練，清楚看見進步</title>
   <style>
     :root {
-      --bg: #09090b; --card: #1e1e22; --border: #2d2d30;
-      --text: #e7e7ea; --muted: #a1a1aa; --green: #22c55e; --purple: #a855f7;
+      --bg: #09090b;
+      --card: #1e1e22;
+      --border: #2d2d30;
+      --text: #e7e7ea;
+      --muted: #a1a1aa;
+      --green: #22c55e;
     }
+
     * { box-sizing: border-box; }
+
     body {
-      margin: 0; min-height: 100vh; background: var(--bg); color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC",
-        "Microsoft JhengHei", Roboto, Helvetica, Arial, sans-serif;
-      display: flex; align-items: center; justify-content: center; padding: 24px;
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "PingFang TC", "Microsoft JhengHei", sans-serif;
     }
-    .wrap { max-width: 540px; width: 100%; text-align: center; }
-    h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.4px; }
-    p.sub { color: var(--muted); margin: 0 0 32px; }
-    a.card {
-      display: block; text-decoration: none; color: var(--text);
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 18px; padding: 20px 22px; margin: 14px 0; text-align: left;
-      transition: border-color .15s ease, transform .15s ease;
+
+    main {
+      width: min(100% - 40px, 600px);
+      margin: 0 auto;
+      padding: 72px 0 44px;
+      text-align: center;
     }
-    a.card:hover { transform: translateY(-2px); }
-    a.card.green:hover { border-color: rgba(34,197,94,.6); }
-    a.card.purple:hover { border-color: rgba(168,85,247,.6); }
-    .t { font-size: 17px; font-weight: 800; }
-    .d { font-size: 13px; color: var(--muted); margin-top: 4px; }
-    .emoji { font-size: 20px; margin-right: 8px; }
-    footer { margin-top: 28px; color: var(--muted); font-size: 12px; }
+
+    .logo {
+      width: 82px;
+      height: 82px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #22c55e, #0f766e);
+      color: #fff;
+      font-size: 27px;
+      font-weight: 800;
+      box-shadow: 0 14px 32px rgba(34, 197, 94, .25);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 9vw, 52px);
+      letter-spacing: -.04em;
+    }
+
+    .intro {
+      max-width: 450px;
+      margin: 12px auto 28px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .download {
+      display: block;
+      padding: 16px 20px;
+      border-radius: 14px;
+      background: var(--green);
+      color: #052e1a;
+      font-size: 17px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .download:hover { filter: brightness(1.08); }
+
+    .note {
+      margin: 12px 0 38px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .features {
+      display: grid;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .feature {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card);
+    }
+
+    .feature h2 {
+      margin: 0 0 5px;
+      font-size: 18px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    footer {
+      margin-top: 36px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a {
+      margin: 0 8px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    footer p { margin: 18px 0 0; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>👾 GymAI</h1>
-    <p class="sub">使用支援與法律文件 · Support &amp; Legal</p>
+  <main>
+    <div class="logo">GYM</div>
 
-    <a class="card green" href="./support.html">
-      <div class="t"><span class="emoji">💬</span>使用支援</div>
-      <div class="d">Support — 帳號、資料同步、訂閱與恢復購買協助</div>
+    <h1>GymAI</h1>
+    <p class="intro">
+      將每次訓練、力量表現與肌群平衡集中整理，
+      讓你清楚看見自己的進步。
+    </p>
+
+    <a class="download"
+       href="https://apps.apple.com/tw/app/gymai/id6798181081"
+       target="_blank" rel="noopener">
+      在 App Store 下載 GymAI
     </a>
+    <p class="note">iPhone 與 iPad 適用</p>
 
-    <a class="card green" href="./privacy-policy.html">
-      <div class="t"><span class="emoji">🔒</span>隱私權政策</div>
-      <div class="d">Privacy Policy — 本機儲存、雲端同步、權限與資料刪除</div>
-    </a>
+    <section class="features">
+      <article class="feature">
+        <h2>快速記錄每次訓練</h2>
+        <p>以動作、重量與次數建立訓練紀錄，並從日曆回顧每一天的內容。</p>
+      </article>
 
-    <a class="card purple" href="./terms-of-service.html">
-      <div class="t"><span class="emoji">📜</span>服務條款</div>
-      <div class="d">Terms of Service — 訂閱規範與醫療免責聲明</div>
-    </a>
+      <article class="feature">
+        <h2>掌握力量變化</h2>
+        <p>查看 1RM 趨勢與個人最佳紀錄，了解每項動作的進步軌跡。</p>
+      </article>
 
-    <footer>© 2026 GymAI 開發團隊</footer>
-  </div>
+      <article class="feature">
+        <h2>檢視肌群平衡</h2>
+        <p>依近期訓練紀錄整理肌群比例，協助辨識容易忽略的部位。</p>
+      </article>
+
+      <article class="feature">
+        <h2>AI 教練分析</h2>
+        <p>根據你的訓練歷程，提供今日訓練方向與近期恢復狀態的分析。</p>
+      </article>
+    </section>
+
+    <footer>
+      <a href="./support.html">使用支援</a>
+      <a href="./privacy-policy.html">隱私權政策</a>
+      <a href="./terms-of-service.html">服務條款</a>
+      <p>© 2026 GymAI</p>
+    </footer>
+  </main>
 </body>
 </html>
