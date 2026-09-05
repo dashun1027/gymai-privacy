@@ -3,8 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GymAI 是為重量訓練者打造的個人健身紀錄與分析工具。">
   <title>GymAI｜訓練不只記錄，更要看見進步</title>
+  <meta name="description" content="記錄每次訓練，掌握力量變化、肌群平衡與 AI 分析，讓下一次訓練更有依據。免費下載・登入後享 30 天試用。">
+
+  <!-- Open Graph / 社群分享預覽 (LINE, FB, Threads) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dashun1027.github.io/gymai-privacy/">
+  <meta property="og:title" content="GymAI｜訓練不只記錄，更要看見進步">
+  <meta property="og:description" content="記錄每次訓練，掌握力量變化、肌群平衡與 AI 分析，讓下一次訓練更有依據。免費下載・登入後享 30 天試用。">
+  <meta property="og:image" content="https://dashun1027.github.io/gymai-privacy/gymai-logo.JPG">
+
+  <!-- Twitter / X 卡片標籤 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GymAI｜訓練不只記錄，更要看見進步">
+  <meta name="twitter:description" content="記錄每次訓練，掌握力量變化、肌群平衡與 AI 分析，讓下一次訓練更有依據。免費下載・登入後享 30 天試用。">
+  <meta name="twitter:image" content="https://dashun1027.github.io/gymai-privacy/gymai-logo.JPG">
+
   <style>
     :root {
       --ink: #102a4c;
@@ -164,7 +178,19 @@
     }
 
     footer a { margin: 0 8px; color: var(--ink); text-decoration: none; }
-    footer p { margin: 16px 0 0; }
+    
+    .disclaimer {
+      font-size: 13px;
+      color: #7b93ae;
+      margin: 22px auto 0;
+      line-height: 1.6;
+      max-width: 580px;
+    }
+
+    .copyright {
+      margin: 12px 0 0;
+      font-size: 14px;
+    }
 
     @media (max-width: 680px) {
       main { width: min(100% - 32px, 600px); padding-top: 24px; }
@@ -175,6 +201,7 @@
       .section img { width: min(72%, 250px); justify-self: center; grid-row: 2; }
       .section.reverse { grid-template-columns: 1fr; padding-top: 28px; }
       .section.reverse img { grid-column: auto; }
+      .disclaimer { font-size: 12px; padding: 0 16px; }
     }
   </style>
 </head>
@@ -219,10 +246,13 @@
     </section>
 
     <footer>
-      <a href="./support.html">使用支援</a>
-      <a href="./privacy-policy.html">隱私權政策</a>
-      <a href="./terms-of-service.html">服務條款</a>
-      <p>© 2026 GymAI</p>
+      <div>
+        <a href="./support.html">使用支援</a>
+        <a href="./privacy-policy.html">隱私權政策</a>
+        <a href="./terms-of-service.html">服務條款</a>
+      </div>
+      <p class="disclaimer">GymAI 提供的分析與建議僅供健身參考，不構成醫療診斷。請依個人身體狀況量力而為。</p>
+      <p class="copyright">© 2026 GymAI</p>
     </footer>
   </main>
 </body>
